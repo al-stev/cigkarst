@@ -46,8 +46,8 @@ except ImportError:
 # Configuration (Colab)
 # ======================
 # Set these directly in Colab by editing the values below.
-WANDB_ENTITY = "wandb_emea"
-WANDB_PROJECT = "workshop-prep"
+WANDB_ENTITY = "geo-prior-shell"
+WANDB_PROJECT = "wandb-example"
 ARTIFACT_NAME = "cigkarst-geological-samples"
 
 # Dataset Registry components (matches prepare_dataset.py behaviour)
@@ -281,7 +281,8 @@ def create_curated_dataset(
                 "samples": curated_samples,
                 "total_samples": len(curated_samples),
                 "patch_size": patch_size,
-                "source_directory": str(data_dir),
+                # Use a canonical, machine-agnostic source identifier to avoid cross-machine diffs
+                "source_directory": "zenodo://4285733",
             },
             f,
             ensure_ascii=False,

@@ -1,0 +1,37 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments  
+venv/
+.venv/
+env/
+.env
+
+# Weights & Biases runs
+wandb/
+
+# Data files
+data/
+*.dat
+
+# IDE files
+.vscode/
+.idea/
+.cursor/
+.claude/
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Model artifacts
+*.pth
+*.pt
+*.zip
